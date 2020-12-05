@@ -21,6 +21,16 @@ async def on_message(msg):
     if msg.author == bot.user:
         return
     
+    if msg.content == 'tell me a dad joke':
+    dad_jokes = [
+        "How do you get a squirrel to like you? Act like a nut.",
+        "Why don't eggs tell jokes? They'd crack each other up.",
+        "I don't trust stairs. They're always up to something.",
+    ]
+    response = random.choice(dad_jokes)
+    await msg.channel.send(response)
+
+
     if msg.content == 'blah':
         response = "don\'t be sad"
         await msg.channel.send(response)
